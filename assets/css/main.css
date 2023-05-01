@@ -2595,6 +2595,8 @@ input, select, textarea {
 
 		}
 
+    
+
 /* Section/Article */
 
 	section.special, article.special {
@@ -2632,6 +2634,57 @@ input, select, textarea {
 	section header > :first-child, article header > :first-child {
 		border-bottom-color: #eaeaea;
 	}
+
+
+	#events {
+		display:flex;
+    justify-content: right;
+		flex-wrap: wrap;
+    width: 50%;
+	}
+
+		#events article {
+			width: 40%;
+			outline: 0;
+		}
+
+			#events article .thumbnail {
+				display: block;
+				position: relative;
+				border: 0;
+				outline: 0;
+			}
+
+				#events article .thumbnail img {
+					width: 97%;
+				}
+
+				#events article .thumbnail:before {
+					pointer-events: none;
+					-moz-transition: opacity 0.25s ease;
+					-webkit-transition: opacity 0.25s ease;
+					-ms-transition: opacity 0.25s ease;
+					transition: opacity 0.25s ease;
+					content: '';
+					
+					left: 0;
+					top: 0;
+					
+					opacity: 0;
+					z-index: 1;
+				}
+
+				#events article .thumbnail:focus:before {
+					opacity: 0.5;
+				}
+
+			#events article h2, #events article p {
+				display: none;
+			}
+
+			#events article.active .thumbnail:before {
+				opacity: 1;
+			}
 
 /* Table */
 
@@ -2721,12 +2774,9 @@ input, select, textarea {
 	}
 
 /* Spotlight */
-
+  
 	.spotlight {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+     display: flex;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3530,6 +3580,41 @@ input, select, textarea {
 			width: 100%;
 			z-index: 1;
 		}
+
+    .instagram-gallery-medium {
+      width: 480px;
+      cursor: pointer;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .instagram-gallery-medium > a {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      margin: 5px;
+  }
+  
+  .instagram-gallery-medium > a > video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  #mc_embed_signup {
+    text-align:center;
+    width: 50%;
+    height: 500px;
+  }
+
+  label, input {
+    width: 200px;
+  }
 
 		@media screen and (max-width: 1280px) {
 

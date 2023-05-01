@@ -1,133 +1,135 @@
 /*
-	Formula by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
+  Formula by Pixelarity
+  pixelarity.com | hello@pixelarity.com
+  License: pixelarity.com/license
 */
 
-(function($) {
 
-	var	$window = $(window),
-		$body = $('body');
+(function ($) {
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
+  var $window = $(window),
+    $body = $('body');
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Breakpoints.
+  breakpoints({
+    xlarge: ['1281px', '1680px'],
+    large: ['981px', '1280px'],
+    medium: ['737px', '980px'],
+    small: ['481px', '736px'],
+    xsmall: ['361px', '480px'],
+    xxsmall: [null, '360px']
+  });
 
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				visibleClass: 'is-menu-visible',
-				target: $body,
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right'
-			});
+  // Play initial animations on page load.
+  $window.on('load', function () {
+    window.setTimeout(function () {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
 
-	// Banner.
-		var $banner = $('#banner'),
-			$header = $('#header');
+  // Menu.
+  $('#menu')
+    .append('<a href="#menu" class="close"></a>')
+    .appendTo($body)
+    .panel({
+      visibleClass: 'is-menu-visible',
+      target: $body,
+      delay: 500,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: 'right'
+    });
 
-		if ($banner.length > 0) {
+  // Banner.
+  var $banner = $('#banner'),
+    $header = $('#header');
 
-			// IE: Height fix.
-				if (browser.name == 'ie') {
+  if ($banner.length > 0) {
 
-					breakpoints.on('>small', function() {
-						$banner.css('height', '100vh');
-					});
+    // IE: Height fix.
+    if (browser.name == 'ie') {
 
-					breakpoints.on('<=small', function() {
-						$banner.css('height', '');
-					});
+      breakpoints.on('>small', function () {
+        $banner.css('height', '100vh');
+      });
 
-				}
+      breakpoints.on('<=small', function () {
+        $banner.css('height', '');
+      });
 
-			// More button.
-				$banner.find('.more')
-					.addClass('scrolly');
-
-			// Header.
-				$header
-					.addClass('with-banner')
-					.addClass('alt');
-
-				$banner.scrollex({
-					mode: 'top',
-					top: '-100vh',
-					bottom: 10,
-					enter: function() { $header.addClass('alt'); },
-					leave: function() { $header.removeClass('alt'); }
-				});
-
-		}
-
-    // Anchor Points
-    function changeSection() {
-      document.quesrySelector('.button.primary.large')
     }
 
-	// Spotlights.
-		var $spotlight = $('.spotlight');
+    // More button.
+    $banner.find('.more')
+      .addClass('scrolly');
 
-		if ($spotlight.length > 0
-		&&	browser.canUse('transition'))
-			$spotlight.each(function() {
+    // Header.
+    $header
+      .addClass('with-banner')
+      .addClass('alt');
 
-				var $this = $(this);
+    $banner.scrollex({
+      mode: 'top',
+      top: '-100vh',
+      bottom: 10,
+      enter: function () { $header.addClass('alt'); },
+      leave: function () { $header.removeClass('alt'); }
+    });
 
-				$this.scrollex({
-					mode: 'middle',
-					top: '-10vh',
-					bottom: '-10vh',
-					initialize: function() { $this.addClass('inactive'); },
-					enter: function() { $this.removeClass('inactive'); }
-				});
+  }
 
-			});
+  // Spotlights.
+  var $spotlight = $('.spotlight');
 
-	// Features.
-		var $features = $('.features');
+  if ($spotlight.length > 0
+    && browser.canUse('transition'))
+    $spotlight.each(function () {
 
-		if ($features.length > 0
-		&&	browser.canUse('transition'))
-			$features.each(function() {
+      var $this = $(this);
 
-				var $this = $(this);
+      $this.scrollex({
+        mode: 'middle',
+        top: '-10vh',
+        bottom: '-10vh',
+        initialize: function () { $this.addClass('inactive'); },
+        enter: function () { $this.removeClass('inactive'); }
+      });
 
-				$this.scrollex({
-					mode: 'middle',
-					top: '-20vh',
-					bottom: '-20vh',
-					initialize: function() { $this.addClass('inactive'); },
-					enter: function() { $this.removeClass('inactive'); }
-				});
+    });
 
-			});
+  // Features.
+  var $features = $('.features');
 
-	// Scrolly.
-		$('.scrolly').scrolly();
+  if ($features.length > 0
+    && browser.canUse('transition'))
+    $features.each(function () {
 
-	// Initial scroll.
-		$window.on('load', function() {
-			$window.trigger('scroll');
-		});
+      var $this = $(this);
+
+      $this.scrollex({
+        mode: 'middle',
+        top: '-20vh',
+        bottom: '-20vh',
+        initialize: function () { $this.addClass('inactive'); },
+        enter: function () { $this.removeClass('inactive'); }
+      });
+
+    });
+
+  // Scrolly.
+  $('.scrolly').scrolly();
+
+  // Initial scroll.
+  $window.on('load', function () {
+    $window.trigger('scroll');
+  });
 
 })(jQuery);
+
+
+
+
+// // Instagram API
+// https://api.instagram.com/oauth/authorize?client_id=6074440476002258&redirect_uri=https://alanapartydecor.github.io/&scope=user_profile,user_media&response_type=code
