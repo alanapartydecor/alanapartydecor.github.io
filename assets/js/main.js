@@ -79,6 +79,11 @@
 
 		}
 
+    // Anchor Points
+    function changeSection() {
+      document.quesrySelector('.button.primary.large')
+    }
+
 	// Spotlights.
 		var $spotlight = $('.spotlight');
 
