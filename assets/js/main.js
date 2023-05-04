@@ -151,39 +151,39 @@ span.onclick = function () {
 }
 
 
-// When the user clicks on <span> (x), close the modal
-
-// Get the <span> element that closes the modal
-// var indexValue = 1;
-// showImg(indexValue);
-// function arrow(e) {
-//   showImg(indexValue += e);
-// }
-// function showImg(e) {
-//   var i;
-//   const img = document.querySelectorAll('img')
-//   if (e > img.length) {
-//     indexValue = 1
-//   }
-//   if (e < 1) {
-//     indexValue = img.length
-//   }
-//   for (i = 0; i < img.length; i++) {
-//     img[i].style.display = "none";
-//   }
-//   img[indexValue - 1].style.display = "block";
-// }
 
 
 
+var indexValue = 1;
+showImg(indexValue);
+function arrow(e) {
+  showImg(indexValue += e);
+}
+function showImg(e) {
+  var i;
+  const img = document.querySelectorAll('modalImg')
+  if (e > img.length) {
+    indexValue = 1
+  }
+  if (e < 1) {
+    indexValue = img.length
+  }
+  for (i = 0; i < img.length; i++) {
+    img[i].style.display = "none";
+  }
+  img[indexValue - 1].style.display = "block";
+}
 
-// Toggle Image Modal
-// let slideIndex = 1;
-// showSlides(slideIndex);
+
+
+
+// // Toggle Image Modal
+// let galleryIndex = 1;
+// showSlides(galleryIndex);
 
 // // Next/previous controls
 // function plusSlides(n) {
-//   showSlides(slideIndex += n);
+//   showSlides(galleryIndex += n);
 // }
 
 // function changeImage() {
