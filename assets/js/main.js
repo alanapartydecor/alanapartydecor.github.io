@@ -128,6 +128,61 @@
 
 })(jQuery);
 
+// Modal Pop Up
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName("toggle");
+for (var i = 0; i < img.length; i++) {
+  var modalImg = document.getElementById("img01");
+  var captionLeftArrow = document.getElementById("left-arrow");
+  var captionRightArrow = document.getElementById("right-arrow");
+  img[i].addEventListener('click', function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  })
+}
+
+// Get the <span> element that closes the modal
+var indexValue = 1;
+showImg(indexValue);
+function side_slide(e) {
+  showImg(indexValue += e);
+}
+function showImg(e) {
+  var i;
+  const img = document.querySelectorAll('img')
+  if (e > img.length) {
+    indexValue = 1
+  }
+  if (e < 1) {
+    indexValue = img.length
+  }
+  for (i = 0; i < img.length; i++) {
+    img[i].style.display = "none";
+  }
+  img[indexValue - 1].style.display = "block";
+}
+
+
+
+
+// Toggle Image Modal
+// let slideIndex = 1;
+// showSlides(slideIndex);
+
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// function changeImage() {
+//   var image = document.getElementById('modalImg');
+//   img.src = "./images-testing/balloon1.jpeg"
+// }
+
+
+
 
 // GET https://graph.instagram.com/{media-id}
 //   ? fields = { fields }
