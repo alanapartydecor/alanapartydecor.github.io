@@ -2643,13 +2643,19 @@ input, select, textarea {
     width: 50%;
 	}
 
+  #events2 {
+		display:flex;
+    justify-content: left;
+		flex-wrap: wrap;
+    width: 50%;
+	}
+
 		#events article {
 			width: 40%;
 			outline: 0;
 		}
 
 			#events article .thumbnail {
-				
 				position: relative;
 				border: 0;
 				outline: 0;
@@ -2685,6 +2691,48 @@ input, select, textarea {
 			#events article.active .thumbnail:before {
 				opacity: 1;
 			}
+
+      #events2 article {
+        width: 40%;
+        outline: 0;
+      }
+  
+        #events2 article .thumbnail {
+          position: relative;
+          border: 0;
+          outline: 0;
+        }
+  
+          #events2 article .thumbnail img {
+            width: 97%;
+          }
+  
+          #events2 article .thumbnail:before {
+            pointer-events: none;
+            -moz-transition: opacity 0.25s ease;
+            -webkit-transition: opacity 0.25s ease;
+            -ms-transition: opacity 0.25s ease;
+            transition: opacity 0.25s ease;
+            content: '';
+            
+            left: 0;
+            top: 0;
+            
+            opacity: 0;
+            z-index: 1;
+          }
+  
+          #events2 article .thumbnail:focus:before {
+            opacity: 0.5;
+          }
+  
+        #events2 article h2, #events2 article p {
+          display: none;
+        }
+  
+        #events2 article.active .thumbnail:before {
+          opacity: 1;
+        }
 
 /* Table */
 
@@ -2841,6 +2889,7 @@ input, select, textarea {
 			-webkit-flex-direction: row-reverse;
 			-ms-flex-direction: row-reverse;
 			flex-direction: row-reverse;
+      gap: 10px;
 		}
 
 			.spotlight.alt .image {
@@ -3466,6 +3515,14 @@ input, select, textarea {
 			position: relative;
 			z-index: 2;
 		}
+
+    .inner .spotlight .style2 {
+      flex-direction: column-reverse;
+    }
+
+    #events2 {
+      flex-direction: row-reverse;
+    }
 
 		#banner h1 {
 			font-size: 2.75em;
