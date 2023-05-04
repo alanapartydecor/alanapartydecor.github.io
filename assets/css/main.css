@@ -3199,15 +3199,6 @@ input, select, textarea {
           color: #ccc;
         }
 
-        .ok-slider--show-1 {
-          .ok-slide--1 {
-            display: block;
-          }
-          .ok-slide--2,
-          .ok-slide--3,
-          .ok-slide--4 {
-            display: none;
-         }
 		}
 
 		@media screen and (max-width: 480px) {
