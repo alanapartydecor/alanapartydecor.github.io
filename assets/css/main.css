@@ -2655,17 +2655,17 @@ input, select, textarea {
 			outline: 0;
 		}
 
-			#events article .thumbnail {
+			#events article .slide {
 				position: relative;
 				border: 0;
 				outline: 0;
 			}
 
-				#events article .thumbnail img {
+				#events article .slide img {
 					width: 97%;
 				}
 
-				#events article .thumbnail:before {
+				#events article .slide:before {
 					pointer-events: none;
 					-moz-transition: opacity 0.25s ease;
 					-webkit-transition: opacity 0.25s ease;
@@ -2680,7 +2680,7 @@ input, select, textarea {
 					z-index: 1;
 				}
 
-				#events article .thumbnail:focus:before {
+				#events article .slide:focus:before {
 					opacity: 0.5;
 				}
 
@@ -2688,7 +2688,7 @@ input, select, textarea {
 				display: none;
 			}
 
-			#events article.active .thumbnail:before {
+			#events article.active .slide:before {
 				opacity: 1;
 			}
 
@@ -2697,17 +2697,17 @@ input, select, textarea {
         outline: 0;
       }
   
-        #events2 article .thumbnail {
+        #events2 article .slide {
           position: relative;
           border: 0;
           outline: 0;
         }
   
-          #events2 article .thumbnail img {
+          #events2 article .slide img {
             width: 97%;
           }
   
-          #events2 article .thumbnail:before {
+          #events2 article .slide:before {
             pointer-events: none;
             -moz-transition: opacity 0.25s ease;
             -webkit-transition: opacity 0.25s ease;
@@ -2722,7 +2722,7 @@ input, select, textarea {
             z-index: 1;
           }
   
-          #events2 article .thumbnail:focus:before {
+          #events2 article .slide:focus:before {
             opacity: 0.5;
           }
   
@@ -2730,7 +2730,7 @@ input, select, textarea {
           display: none;
         }
   
-        #events2 article.active .thumbnail:before {
+        #events2 article.active .slide:before {
           opacity: 1;
         }
 
@@ -3181,7 +3181,7 @@ input, select, textarea {
           background-size: 32px 32px;
         }
 
-        #left-arrow {
+        .carousel-button-prev{
           position:absolute;
           top: 45%;
           right: 65%;
@@ -3190,13 +3190,17 @@ input, select, textarea {
           color: #ccc;
         }
 
-        #right-arrow {
+        .carousel-button-next{
           position:absolute;
           top: 45%;
           left: 65%;
           width: 200px;
           height: 100px;
           color: #ccc;
+        }
+
+        .slide [data-active] {
+          opacity:1;
         }
 
 		}
@@ -3839,7 +3843,7 @@ input, select, textarea {
           background: #fff;
           clear: left;
           font: 14px Helvetica, Arial, sans-serif;
-          width: 80%;
+          width: 30%;
           margin:auto;
         }
         

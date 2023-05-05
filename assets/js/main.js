@@ -132,11 +132,11 @@
 var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementsByClassName("toggle");
+var img = document.getElementsByClassName("modalImg");
 for (var i = 0; i < img.length; i++) {
   var modalImg = document.getElementById("img01");
-  var captionLeftArrow = document.getElementById("left-arrow");
-  var captionRightArrow = document.getElementById("right-arrow");
+  var captionLeftArrow = document.getElementsByClassName("carousel-button-prev");
+  var captionRightArrow = document.getElementsByClassName("carousel-button-next");
   img[i].addEventListener('click', function () {
     modal.style.display = "block";
     modalImg.src = this.src;
@@ -151,28 +151,122 @@ span.onclick = function () {
 }
 
 
+// let sliderImages = document.querySelectorAll(".slide"),
+//   arrowLeft = document.querySelector("#left-arrow"),
+//   arrowRight = document.querySelector("#right-arrow"),
+//   current = 0;
+
+// // Clear all images
+// function reset() {
+//   for (let i = 0; i < sliderImages.length; i++) {
+//     sliderImages[i].style.display = "none";
+//   }
+// }
+
+// // Initial slide
+// function startSlide() {
+//   reset();
+//   sliderImages[0].style.display = "block";
+// }
+
+// // Show previous
+// function slideLeft() {
+//   reset();
+//   sliderImages[current - 1].style.display = "block";
+//   current--;
+// }
+
+// // Show next
+// function slideRight() {
+//   reset();
+//   sliderImages[current + 1].style.display = "block";
+//   current++;
+// }
+
+// // Left arrow click
+// arrowLeft.addEventListener("click", function () {
+//   if (current === 0) {
+//     current = sliderImages.length;
+//   }
+//   slideLeft();
+// });
+
+// // Right arrow click
+// arrowRight.addEventListener("click", function () {
+//   if (current === sliderImages.length - 1) {
+//     current = -1;
+//   }
+//   slideRight();
+// });
+
+// startSlide();
 
 
+// var indexValue = 1;
+// showImg(indexValue);
+// function arrow(e) {
+//   showImg(indexValue += e);
+// }
+// function showImg(e) {
+//   var i;
+//   const img = document.getElementsByClassName('arrow')
+//   if (e > img.length) {
+//     indexValue = 1
+//   }
+//   if (e < 1) {
+//     indexValue = img.length
+//   }
+//   for (i = 0; i < img.length; i++) {
+//     img[i].style.display = "none";
+//   }
+//   img[indexValue - 1].style.display = "block";
+//   console.log(img[indexValue - 1])
+// }
 
-var indexValue = 1;
-showImg(indexValue);
-function arrow(e) {
-  showImg(indexValue += e);
-}
-function showImg(e) {
-  var i;
-  const img = document.querySelectorAll('modalImg')
-  if (e > img.length) {
-    indexValue = 1
-  }
-  if (e < 1) {
-    indexValue = img.length
-  }
-  for (i = 0; i < img.length; i++) {
-    img[i].style.display = "none";
-  }
-  img[indexValue - 1].style.display = "block";
-}
+const buttons = document.querySelectorAll("[data-carousel-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    // const slides = button.closest("[data-carousel]")
+    const slides = button.closest(".carousel").querySelectorAll('a')
+    console.log(slides)
+
+    // const activeSlide = slides.querySelector("[data-active]")
+    // const activeSlide = slides.find(element => element.dataset.active === true);
+    const activeSlide = [...slides].find(element => element.dataset.active === '' || element.dataset.active === 'true');
+    let newIndex = [...slides].indexOf(activeSlide) + offset
+    console.log(activeSlide)
+    // let newIndex = [...slides.children].indexOf(activeSlide) + offset
+
+    if (newIndex < 0) newIndex = slides.length - 1
+    if (newIndex >= slides.length) newIndex = 0
+
+    slides[newIndex].dataset.active = true
+    var modalImg = document.getElementById("img01");
+    modalImg.src = slides[newIndex].children[0].src
+    console.log(slides[newIndex])
+    delete activeSlide.dataset.active
+  })
+})
+
+// var indexValue = 1;
+// function showImg(e) {
+//   const images = document.getElementsByClassName('');
+//   if (e > images.length) {
+//     indexValue = 1
+//   }
+//   if (e < 1) {
+//     indexValue = images.length
+//   }
+//   for (let i = 0; i < images.length; i++) {
+//     images[i].style.display = 'none';
+//   }
+//   images[indexValue - 1].style.display = 'block';
+//   console.log('.toggle')
+// }
+
+// showImg(1)
 
 
 
