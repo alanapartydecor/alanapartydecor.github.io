@@ -1899,8 +1899,6 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 2px #eaeaea;
-		color: #777777 !important;
 	}
 
 		input[type="submit"]:hover,
@@ -3183,20 +3181,20 @@ input, select, textarea {
 
         .carousel-button-prev{
           position:absolute;
+          border: none;
+          font-size: 55px;
           top: 45%;
-          right: 65%;
-          width: 200px;
-          height: 100px;
-          color: #ccc;
+          right: 55%;
+          color:white;
         }
 
         .carousel-button-next{
           position:absolute;
+          background: none;
+          font-size: 55px;
           top: 45%;
-          left: 65%;
-          width: 200px;
-          height: 100px;
-          color: #ccc;
+          left: 55%;
+          color:white;
         }
 
         .slide [data-active] {
@@ -3843,7 +3841,7 @@ input, select, textarea {
           background: #fff;
           clear: left;
           font: 14px Helvetica, Arial, sans-serif;
-          width: 30%;
+          width: 80%;
           margin:auto;
         }
         
