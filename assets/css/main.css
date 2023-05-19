@@ -2633,19 +2633,26 @@ input, select, textarea {
 		border-bottom-color: #eaeaea;
 	}
 
+  .modalImg {
+    height: 200px;
+    width: 100%;
+  }
+
 
 	#events {
 		display:flex;
     justify-content: right;
 		flex-wrap: wrap;
-    width: 50%;
+    width: 60%;
+    height: 40%;
 	}
 
   #events2 {
 		display:flex;
     justify-content: left;
 		flex-wrap: wrap;
-    width: 50%;
+    width: 60%;
+    height: 40%;
 	}
 
 		#events article {
@@ -2660,7 +2667,8 @@ input, select, textarea {
 			}
 
 				#events article .slide img {
-					width: 97%;
+					width: 99%;
+          height: 99%;
 				}
 
 				#events article .slide:before {
@@ -2702,7 +2710,8 @@ input, select, textarea {
         }
   
           #events2 article .slide img {
-            width: 97%;
+            width: 99%;
+            height: 99%;
           }
   
           #events2 article .slide:before {
@@ -2934,7 +2943,9 @@ input, select, textarea {
   width: 80%;
   max-width: 700px;
 }
-
+ #myModal {
+  display: transparent;
+ }
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
   margin: auto;
@@ -3148,6 +3159,24 @@ input, select, textarea {
 			transform: scale(0.9) rotate(45deg);
 			opacity: 0;
 		}
+
+    .carousel-button-prev{
+      position:absolute;
+      border: none;
+      font-size: 55px;
+      top: 35%;
+      right: 60%;
+      color:white;
+    }
+
+    .carousel-button-next{
+      position:absolute;
+      background: none;
+      font-size: 55px;
+      top: 35%;
+      left: 60%;
+      color:white;
+    }
 
 		@media screen and (max-width: 980px) {
 
