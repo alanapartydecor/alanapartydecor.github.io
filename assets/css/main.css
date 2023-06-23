@@ -2596,8 +2596,14 @@ input, select, textarea {
 
 /* Section/Article */
 
+.juicer-feed h1.referral a {
+  display:none;
+  color: white;
+}
+
 	section.special, article.special {
 		text-align: center;
+    margin: 20px;
 	}
 
 	section header, article header {
@@ -2613,11 +2619,13 @@ input, select, textarea {
 
 		section header > :last-child, article header > :last-child {
 			margin-bottom: 0;
+      margin: auto;
+      width: 50%;
 		}
 
 		section header.major, article header.major {
 			margin: 0 0 3em 0;
-			text-align: center;
+			text-align: center;`
 		}
 
 	@media screen and (max-width: 736px) {

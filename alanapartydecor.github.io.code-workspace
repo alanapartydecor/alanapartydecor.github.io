@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../alana-images"
+		}
+	],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "alanapartydecor.github.io"
+  }
+}
