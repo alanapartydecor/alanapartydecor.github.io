@@ -2597,8 +2597,9 @@ input, select, textarea {
 /* Section/Article */
 
 .juicer-feed h1.referral a {
-  display:none;
-  color: white;
+  display:block;
+  opacity: 0%;
+  
 }
 
 	section.special, article.special {
@@ -2674,8 +2675,11 @@ input, select, textarea {
 			}
 
 				#events article .slide img {
-					width: 99%;
-          height: 99%;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: -4px;
+        padding-right: 4px;
 				}
 
 				#events article .slide:before {
@@ -3171,7 +3175,7 @@ input, select, textarea {
       position:absolute;
       border: none;
       font-size: 55px;
-      top: 35%;
+      top: 45%;
       right: 60%;
       color:white;
     }
@@ -3180,7 +3184,7 @@ input, select, textarea {
       position:absolute;
       background: none;
       font-size: 55px;
-      top: 35%;
+      top: 45%;
       left: 60%;
       color:white;
     }
