@@ -23,7 +23,9 @@
 
     <!-- Header -->
     <header id="header">
-      <a href="index.html" class="logo">Alana <span>Party Decor</span></a>
+      <a href="index.html" class="logo">Alana <span>Party Decor</span>
+      </a>
+      <img src="images/logo.jpg" class="logo-img">
       <nav>
         <ul>
           <li><a href="#menu">Menu</a></li>
@@ -35,8 +37,13 @@
     <nav id="menu">
       <ul class="links">
         <li><a href="#banner">Home</a></li>
+        <li><a href="#events">Events</a>
+          <a href="#one">Birthday Parties</a>
+          <a href="#two">All Occasions</a>
+          <a href="#three">Corporate Events</a>
+        </li>
         <li><a href="#four">Gallery</a></li>
-        <li><a href="#cta">Contact Us</a></li>
+        <li><a href="#mc_embed_signup">Contact Us</a></li>
       </ul>
       <!--       <ul class="actions stacked">
         <li><a href="#" class="button primary fit">Sign Up</a></li>
@@ -65,7 +72,7 @@
     <div id="wrapper">
 
       <!-- One -->
-      <section id="one" class="main">
+      <section id="one" class="main" id="bday">
         <div class="inner spotlight style1">
           <div class="content">
             <header>
@@ -84,7 +91,9 @@
                   data-position="left center" /></a>
               <div id="myModal" class="modal">
                 <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
+                <div class="modal-box">
+                  <img class="modal-content" id="img01">
+                </div>
                 <button class="carousel-button-prev" data-carousel-button="prev">&#60;</button>
                 <button class="carousel-button-next" data-carousel-button="next">&#62;</button>
               </div>
@@ -93,7 +102,7 @@
               <a class="slide"><img id="modalImg" class="modalImg" src="/images/birthday16.jpg" alt="" /></a>
               <div id="myModal" class="modal">
                 <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
+                  <img class="modal-content" id="img01">
               </div>
             </article>
             <article>
@@ -117,7 +126,7 @@
 
 
       <section id="two" class="main">
-        <div class="inner spotlight style2 spotlight alt">
+        <div class="inner spotlight style2 spotlight alt" id="all">
           <div class="content">
             <header>
               <h2>All Occasions</h2>
@@ -163,7 +172,7 @@
       </section>
 
       <section id="three" class="main">
-        <div class="inner spotlight style1">
+        <div class="inner spotlight style1" id="corporate">
           <div class="inner spotlight style1">
             <div class="content">
               <header>

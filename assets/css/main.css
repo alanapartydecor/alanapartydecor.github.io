@@ -583,6 +583,14 @@ input, select, textarea {
           height:20%
         }
 
+        .logo-img {
+          width: 80px;
+          height: 80px;
+          padding: 5px;
+        }
+
+      
+
 		@media screen and (max-width: 1680px) {
 
 			.row {
@@ -2670,6 +2678,7 @@ input, select, textarea {
 		flex-wrap: wrap;
     width: 60%;
     height: 40%;
+    border: none;
 	}
 
   #events2 {
@@ -2964,12 +2973,21 @@ input, select, textarea {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.modal-box {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  overflow: hidden;
+  height: 700px;
+  width: 700px;
+
+}
+
 /* Modal Content (Image) */
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  object-fit: cover;
+  height: 700px;
 }
  #myModal {
   display: transparent;
@@ -3000,7 +3018,7 @@ input, select, textarea {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 35px;
+  top: 75px;
   right: 25px;
   color: #f1f1f1;
   font-size: 40px;
@@ -3013,6 +3031,10 @@ input, select, textarea {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+#menu #one {
+  border-top: none;
 }
 
 		@media screen and (max-width: 736px) {
@@ -3193,7 +3215,7 @@ input, select, textarea {
       border: none;
       font-size: 55px;
       top: 45%;
-      right: 60%;
+      right: 59.3%;
       color:white;
     }
 
@@ -3517,7 +3539,7 @@ input, select, textarea {
 			text-align: right;
 			top: 0;
 			vertical-align: middle;
-			width: 7em;
+			width: 6em;
 		}
 
 			#menu .close:before {
@@ -3527,7 +3549,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#menu .close {
-					height: 4em;
+					height: 2em;
 					line-height: 4em;
 				}
 
@@ -3839,6 +3861,13 @@ input, select, textarea {
   label, input {
     width: 200px;
     height: 30px;
+  }
+
+  a.more.scrolly {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
   }
 
 		@media screen and (max-width: 1280px) {
