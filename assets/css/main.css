@@ -4053,7 +4053,6 @@ input, select, textarea {
 	#wrapper > * {
 		padding: 5em 0 3em 0 ;
 		border-bottom: solid 2px #eaeaea;
-		overflow: hidden;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -4062,7 +4061,7 @@ input, select, textarea {
 		#wrapper > * > .inner {
 			margin: 0 auto;
 			max-width: calc(100% - 4em);
-			width: 60em;
+			width: 70em;
 		}
 
 	@media screen and (max-width: 736px) {
