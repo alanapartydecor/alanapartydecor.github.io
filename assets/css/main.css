@@ -4051,6 +4051,9 @@ input, select, textarea {
 		padding: 5em 0 3em 0 ;
 		border-bottom: solid 2px #eaeaea;
 		overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 	}
 
 		#wrapper > * > .inner {
