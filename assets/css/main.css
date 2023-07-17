@@ -4068,6 +4068,9 @@ input, select, textarea {
 
 		#wrapper > * {
 			padding: 3.75em 0 1.75em 2em;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 		}
 
 	}
