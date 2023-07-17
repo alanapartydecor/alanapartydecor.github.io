@@ -2692,6 +2692,9 @@ input, select, textarea {
     width: 60%;
     height: 40%;
     border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 	}
 
   #events2 {
