@@ -4061,7 +4061,7 @@ input, select, textarea {
 		#wrapper > * > .inner {
 			margin: 0 auto;
 			max-width: calc(100% - 4em);
-			width: 70em;
+			width: 80em;
 		}
 
 	@media screen and (max-width: 736px) {
