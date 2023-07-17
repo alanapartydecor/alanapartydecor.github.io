@@ -584,9 +584,10 @@ input, select, textarea {
         }
 
         .logo-img {
-          width: 80px;
-          height: 80px;
+          width: 16%;
+          height: 16%;
           padding: 5px;
+          vertical-align: middle;
         }
 
       
@@ -2616,6 +2617,10 @@ input, select, textarea {
 				padding: 0 0.5em 0 0;
 			}
 
+       button.carousel-button-prev {
+        right: 50%;
+      }
+
 		}
 
     
@@ -2654,11 +2659,19 @@ input, select, textarea {
 			text-align: center;`
 		}
 
+
+
+
+
 	@media screen and (max-width: 736px) {
 
 		section header.major, article header.major {
 			margin: 0 0 2em 0;
 		}
+
+    button.carousel-button-prev {
+      right: 50%;
+    }
 
 	}
 
@@ -2962,7 +2975,7 @@ input, select, textarea {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1001; /* Sit on top */
   /* padding-top: 100px; Location of the box */
   left: 0;
   top: 0;
@@ -2979,8 +2992,9 @@ input, select, textarea {
   margin-right: auto;
   display: flex;
   overflow: hidden;
-  height: 700px;
-  width: 700px;
+  max-height:900px;
+  max-width: 100%;
+  width: 900px;
 
 }
 
@@ -3214,18 +3228,24 @@ input, select, textarea {
       position:absolute;
       border: none;
       font-size: 55px;
-      top: 45%;
-      right: 59.3%;
-      color:white;
+      top: 37%;
+      right: 62.3%;
+    }
+
+    .carousel-button-prev svg{
+      fill: #fff;
     }
 
     .carousel-button-next{
       position:absolute;
       background: none;
       font-size: 55px;
-      top: 45%;
-      left: 60%;
-      color:white;
+      top: 37%;
+      left: 63%;
+    }
+
+    .carousel-button-next svg{
+      fill: #fff;
     }
 
 		@media screen and (max-width: 980px) {
@@ -3283,6 +3303,13 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 480px) {
+
+      .modal-content {
+        width:100%;
+        position: unset;
+        height: unset;
+        margin-top: 50%;
+      }
 
 			.features {
 				-moz-flex-direction: column;
@@ -3360,16 +3387,22 @@ input, select, textarea {
 
 		#header a {
 			color: inherit;
-			font-size: 0.8em;
+			font-size: 1em;
 			font-weight: 500;
 			letter-spacing: 0.25em;
 			text-transform: uppercase;
 			border: 0;
 		}
 
+    .logo-container{
+      margin: 1rem;
+      padding: 1rem 1rem;
+      text-align: left;
+    }
+
 		#header .logo {
-			display: block;
-			height: inherit;
+      display: inline-block;
+      vertical-align: middle;
 			line-height: inherit;
 		}
 
@@ -3416,6 +3449,7 @@ input, select, textarea {
 			background-color: transparent;
 			border-bottom-color: transparent;
 			color: #ffffff;
+      padding-top: 40px;
 		}
 
 			#header.alt nav ul li a[href="#menu"]:before {
@@ -3503,7 +3537,7 @@ input, select, textarea {
 
 					#menu > ul.links > li > a:not(.button) {
 						border: 0;
-						border-top: solid 1px #eaeaea;
+						border-bottom: solid 1px #eaeaea;
 						color: inherit;
 						display: block;
 						font-size: 0.8em;
@@ -3518,9 +3552,15 @@ input, select, textarea {
 						margin: 0.5em 0 0 0;
 					}
 
-					#menu > ul.links > li:first-child > a:not(.button) {
-						border-top: 0 !important;
+          #menu > ul.links > li:nth-child(2) > a:not(.button) {
+						border-bottom: 0;
 					}
+          
+          #menu > ul.links > li:nth-child(3) > a:not(.button) {
+						border-bottom: 0;
+            padding-left: 10px;
+					}
+        
 
 		#menu .close {
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3779,9 +3819,8 @@ input, select, textarea {
 			overflow: hidden;
 			position: absolute;
 			text-indent: 5em;
-			white-space: nowrap;
-			width: 5em;
 			z-index: 2;
+      display: flex;
 		}
 
 			#banner .more:hover {
